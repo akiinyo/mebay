@@ -1,6 +1,11 @@
-Mebay::Application.routes.draw do
+Mebay::Application.routes.draw do 
+  match '/ads/:id/edit', :controller=>'ads',:action=>'edit'
+  match '/ads/:id/update', :controller=>'ads', :action=>'update'
+  match '/ads/new', :controller=>'ads',:action=>'new'
+  match '/ads/create', :controller=>'ads', :action=>'create'
   match '/ads/', :controller=>'ads', :action=>'index'
   match '/ads/:id', :controller=>'ads', :action=>'show'
+  match '/ads/:id/delete', :controller=>'ads', :action=>'destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
